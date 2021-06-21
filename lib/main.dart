@@ -1,3 +1,5 @@
+import 'package:app/constants.dart';
+import 'package:app/screens/welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,31 +11,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
-      home: MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Center(
-        child: Text(
-          "Hello World",
-          style: TextStyle(fontWeight: FontWeight.bold),
-        ),
+      title: 'Flutter App',
+      theme: ThemeData(
+        primaryColor: kPrimaryColor,
+        scaffoldBackgroundColor: Colors.white,
       ),
+      debugShowCheckedModeBanner: false,
+      home: WelcomeScreen(),
     );
   }
 }
