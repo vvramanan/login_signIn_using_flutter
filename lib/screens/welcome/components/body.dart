@@ -21,7 +21,10 @@ class Body extends StatelessWidget {
             Center(
               child: Text(
                 "Welcome to Flutter!!",
-                style: TextStyle(fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: kPrimaryColor,
+                ),
               ),
             ),
             SizedBox(
